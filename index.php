@@ -1,16 +1,14 @@
 <?php
 
-require 'src/Person.php';
-require 'src/Staff.php';
-require 'src/Business.php';
+require 'vendor/autoload.php';
 
-$sabbir = new Person("Sabbir Rahman Sakib");
+$sabbir = new Demo\Person("Sabbir Rahman Sakib");
 
-$staff = new staff([$sabbir]);
+$staff = new Demo\Staff([$sabbir]);
 
-$teleopti = new Business($staff);
+$teleopti = new Demo\Business($staff);
 
-$teleopti->hire(new Person("Sohali Safdar"));
+$teleopti->hire(new Demo\Person("Sohali Safdar"));
 
 
 var_dump($teleopti->getStaffMembers());
