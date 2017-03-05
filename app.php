@@ -1,12 +1,16 @@
 <?php
 
-$sabbir = new Demo\Person("Sabbir Rahman Sakib");
+use Demo\Person;
+use Demo\Staff;
+use Demo\Business;
 
-$staff = new Demo\Staff([$sabbir]);
+$sabbir = new Person("Sabbir Rahman Sakib");
 
-$teleopti = new Demo\Business($staff);
+$staff = new Staff([$sabbir]);
 
-$teleopti->hire(new Demo\Person("Sohali Safdar"));
+$teleopti = new Business($staff);
+
+$teleopti->hire(new Person("Sohali Safdar"));
 
 
 var_dump($teleopti->getStaffMembers());
